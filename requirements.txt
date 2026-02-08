@@ -1,0 +1,7 @@
+torch>=2.0
+numpy
+zarr
+numcodecs
+tqdm
+pyyaml
+matplotlib

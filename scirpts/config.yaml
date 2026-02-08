@@ -1,0 +1,47 @@
+seed: 1
+device: cuda:0
+
+data:
+  balance: false
+  nonlens_path:
+    - data/train
+  lens_path_test: data/test-data/lens
+  nonlens_path_test: data/test-data/nonlens
+  source_key: lsst
+  target_key: euclid
+  max_samples: null
+  batch_size: 128
+  num_workers: 8
+
+model:
+  channels: 3
+  base_channels: 64
+  channel_mults: [1, 2, 4]
+  num_res_blocks: 2
+  time_dim: 256
+  num_timesteps: 1000
+  mt_type: linear
+  max_var: 1.0
+  eta: 1.0
+  objective: eps   # choices: eps | grad | maxnll
+  loss_type: mse
+  nll_a_init: 0.0
+  nll_b_init: -3.0
+  nll_min_var: 1.0e-6
+  skip_sample: false
+  sample_type: linear
+  sample_step: 200
+
+train:
+  num_epochs: 300
+  batch_progress: true
+  lr: 1.0e-4
+  weight_decay: 0.0
+  reverse_weight: 1.0
+  cycle_weight: 0.0
+  save_every: 50
+  save_path: ckpts/eps
+  resume_path: none
+  sample_every: 10
+  sample_dir: samples/eps
+  sample_count: 16
