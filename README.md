@@ -34,11 +34,7 @@ AS-Bridge produces diverse yet physically consistent reconstructions, capturing 
 
 ## Data and Weights
 
-Train/test data and pretrained weights are available at:
-
-```
-https://drive.google.com/drive/folders/1r57M74BhZAf1o2SMkgYpreC2fT0-vwU1?usp=drive_link
-```
+[Train/test data and pretrained weights](https://drive.google.com/drive/folders/1r57M74BhZAf1o2SMkgYpreC2fT0-vwU1?usp=drive_link)
 
 ---
 
